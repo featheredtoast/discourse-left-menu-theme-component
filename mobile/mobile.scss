@@ -31,9 +31,6 @@
   }
   .hamburger-dropdown {
     grid-area: left-menu;
-    @if ($center_logo == "true") {
-      min-width: 33vw;
-    }
   }
   .current-user {
     grid-area: right-menu;
@@ -45,5 +42,11 @@
   // some protection for text-only site titles
   .title {
     grid-area: logo;
+    @if ($center_logo == "true") {
+      .logo-mobile {
+        margin-left: calc(50vw - 50% - 25px);
+      }
+    }
+    max-width: unset;
   }
 }
