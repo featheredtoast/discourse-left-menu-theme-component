@@ -31,6 +31,9 @@
   }
   .hamburger-dropdown {
     grid-area: left-menu;
+    @if ($center_logo == "true") {
+      min-width: 33vw;
+    }
   }
   .current-user {
     grid-area: right-menu;
