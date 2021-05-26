@@ -4,7 +4,7 @@
     ". . . . . ." auto
     "left-menu logo extra-info header-buttons search right-menu" auto
     ". . . . . ." auto
-    / auto auto 1fr auto auto auto;
+    / auto 1fr auto auto auto auto;
   grid-column-gap: 0.2em;
   padding: 0 8px;
   box-sizing: border-box;
@@ -37,15 +37,14 @@
   }
   .extra-info-wrapper {
     grid-area: extra-info;
+    width: calc(100vw - 100px);
   }
 
   // some protection for text-only site titles
   .title {
     grid-area: logo;
     @if ($center_logo == "true") {
-      .logo-mobile {
-        margin-left: calc(50vw - 50% - 25px);
-      }
+      margin: 0 auto;
     }
     max-width: unset;
   }
