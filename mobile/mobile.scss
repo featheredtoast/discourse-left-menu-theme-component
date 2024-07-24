@@ -1,7 +1,7 @@
 .d-header {
   display: grid;
   grid:
-"left-menu logo extra-info chat-header-icon search right-menu" auto;
+"left-menu logo extra-info chat search right-menu" auto;
   grid-column-gap: 0.2em;
   padding: 0 8px;
   box-sizing: border-box;
@@ -36,6 +36,9 @@
   .extra-info-wrapper {
     grid-area: extra-info;
     width: calc(100vw - 100px);
+  }
+  .chat-header-icon {
+    grid-area: chat
   }
 
   // some protection for text-only site titles
