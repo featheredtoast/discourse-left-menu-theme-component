@@ -1,7 +1,6 @@
 .d-header {
   display: grid;
-  grid:
-"left-menu logo extra-info chat search right-menu" auto;
+  grid: 'left-menu logo custom-header-icon-link extra-info chat search right-menu' auto;
   grid-column-gap: 0.2em;
   padding: 0 8px;
   box-sizing: border-box;
@@ -17,7 +16,7 @@
   .panel {
     &,
     & > .d-header-icons {
-      display: contents;
+      display: flex;
     }
   }
 
@@ -41,10 +40,14 @@
     grid-area: chat;
   }
 
+  .custom-header-icon-link {
+    grid-area: custom-header-icon-link;
+  }
+
   // some protection for text-only site titles
   .title {
     grid-area: logo;
-    @if ($center_logo == "true") {
+    @if ($center_logo == 'true') {
       margin: 0 auto;
     }
     max-width: unset;
