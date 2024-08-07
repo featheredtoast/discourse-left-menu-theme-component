@@ -1,7 +1,7 @@
 .d-header {
   display: grid;
-  grid: 'left-menu logo custom-header-icon-link extra-info chat search right-menu' auto;
-  grid-column-gap: 0.2em;
+  grid-template-areas: 'left-menu logo custom-header-icon-link-1 custom-header-icon-link-2 custom-header-icon-link-3 custom-header-icon-link-4 custom-header-icon-link-5 extra-info chat search right-menu';
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   padding: 0 8px;
   box-sizing: border-box;
   align-content: center;
@@ -39,9 +39,23 @@
   .chat-header-icon {
     grid-area: chat;
   }
-
-  .custom-header-icon-link {
-    grid-area: custom-header-icon-link;
+  .icon-wrapper{
+    grid-area: custom-header-icon-link-1;
+  }
+  .custom-header-icon-link:nth-child(1) {
+    grid-area: custom-header-icon-link-1;
+  }
+  .custom-header-icon-link:nth-child(2) {
+    grid-area: custom-header-icon-link-2;
+  }
+  .custom-header-icon-link:nth-child(3) {
+    grid-area: custom-header-icon-link-3;
+  }
+  .custom-header-icon-link:nth-child(4) {
+    grid-area: custom-header-icon-link-4;
+  }
+  .custom-header-icon-link:nth-child(5) {
+    grid-area: custom-header-icon-link-5;
   }
 
   // some protection for text-only site titles
