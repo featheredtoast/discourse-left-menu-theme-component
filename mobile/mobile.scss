@@ -1,7 +1,7 @@
 .d-header {
   display: grid;
   grid:
-"left-menu logo extra-info chat search right-menu" auto;
+"left-menu logo extra-info chat header-buttons search right-menu" auto;
   grid-column-gap: 0.2em;
   padding: 0 8px;
   box-sizing: border-box;
