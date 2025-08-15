@@ -15,8 +15,11 @@
 
   .panel {
     &,
-    & > .d-header-icons {
-      display: contents;
+    .header-buttons {
+      &,
+      & > .d-header-icons {
+        display: contents;
+      }
     }
   }
 
