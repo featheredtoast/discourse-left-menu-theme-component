@@ -15,8 +15,11 @@
 
   .panel {
     &,
-    & > .d-header-icons {
-      display: contents;
+    .header-buttons {
+      &,
+      & > .d-header-icons {
+        display: contents;
+      }
     }
   }
 
@@ -60,7 +63,7 @@
   .title {
     grid-area: logo;
     @if ($center_logo == 'true') {
-      margin: 0 auto;
+      justify-content: center;
     }
     max-width: unset;
   }
