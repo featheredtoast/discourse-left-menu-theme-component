@@ -1,8 +1,8 @@
 {
-  "name": "discourse-left-menu",
-  "about_url": null,
-  "license_url": null,
+  "name": "discourse-left-side-burger",
   "component": true,
-  "assets": {},
-  "color_schemes": {}
+  "authors": "Discourse",
+  "about_url": "https://github.com/Lillinator/discourse-left-side-burger/blob/main/README.md",
+  "license_url": "https://github.com/Lillinator/discourse-left-side-burger/blob/main/LICENSE",
+  "theme_version": "2.0.0"
 }
