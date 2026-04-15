@@ -1,0 +1,88 @@
+// ** Mobile viewport only ** //
+
+@use "lib/viewport";
+
+@include viewport.until(md) {
+
+// ** Reorder the header contents on mobile and put the hamburger bars icon first on th left ** //
+  
+  .d-header {
+    display: grid;
+    grid-template-areas: 'left-menu logo custom-header-icon-link-1 custom-header-icon-link-2 custom-header-icon-link-3 custom-header-icon-link-4 custom-header-icon-link-5 extra-info chat header-buttons search right-menu';
+    grid-template-columns: max-content 1fr repeat(11, max-content);
+    padding: 0 8px;
+    box-sizing: border-box;
+    align-content: center;
+
+    & > .wrap {
+      &,
+      & .contents {
+        display: contents;
+      }
+    }
+
+    .panel {
+      &,
+      & > .d-header-icons {
+        display: contents;
+      }
+    }
+
+    .header-buttons {
+      grid-area: header-buttons;
+    }
+    .search-dropdown {
+      grid-area: search;
+    }
+    .hamburger-dropdown {
+      padding-right: 5px;
+      grid-area: left-menu;
+    }
+    .current-user {
+    grid-area: right-menu;
+    }
+    .extra-info-wrapper {
+      grid-area: extra-info;
+      width: calc(100vw - 100px);
+    }
+    .chat-header-icon {
+      grid-area: chat;
+    }
+    .custom-header-icon-link:nth-child(1) {
+      grid-area: custom-header-icon-link-1;
+    }
+    .custom-header-icon-link:nth-child(2) {
+      grid-area: custom-header-icon-link-2;
+    }
+    .custom-header-icon-link:nth-child(3) {
+      grid-area: custom-header-icon-link-3;
+    }
+  .custom-header-icon-link:nth-child(4) {
+      grid-area: custom-header-icon-link-4;
+    }
+    .custom-header-icon-link:nth-child(5) {
+      grid-area: custom-header-icon-link-5;
+    }
+
+    // ** Some protection for text-only site titles ** //
+    .title {
+      grid-area: logo;
+      @if ($center_logo == 'true') {
+        margin: 0 auto;
+      }
+      max-width: unset;
+    }
+  }
+
+  // ** Centre site logo if `center_logo` setting is enabled ** /
+
+  @if ($center_logo == 'true') {
+    .d-header:not(:has(.extra-info-wrapper.topic-info-visible)):not(:has(.extra-info-wrapper .topic-link)):not(.header-topic-info-visible) .title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+  }
+}
