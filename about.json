@@ -2,7 +2,7 @@
   "name": "discourse-left-side-burger",
   "component": true,
   "authors": "Discourse",
-  "about_url": "https://github.com/Lillinator/discourse-left-side-burger/blob/main/README.md",
-  "license_url": "https://github.com/Lillinator/discourse-left-side-burger/blob/main/LICENSE",
+  "about_url": "https://github.com/featheredtoast/discourse-left-menu-theme-component/blob/main/README.md",
+  "license_url": "https://github.com/featheredtoast/discourse-left-menu-theme-component/blob/main/LICENSE",
   "theme_version": "2.0.0"
 }
